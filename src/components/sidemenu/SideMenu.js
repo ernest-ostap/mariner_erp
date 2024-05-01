@@ -1,35 +1,61 @@
 import React from 'react'
 import './SideMenu.css'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+
 
 const SideMenu = () => {
   return (
-    <div>
-      <Container>
-        <Row>
-          <Col>Strona główna</Col>
-        </Row>
-        <Row>
-          <Col>Kadra pracownicza</Col>
-        </Row>
-        <Row>
-          <Col>Finanse i księgowość</Col>
-        </Row>
-        <Row>
-          <Col>Analizy</Col>
-        </Row>
-        <Row>
-          <Col>Sprzedaż i zakup</Col>
-        </Row>
-        <Row>
-          <Col>Produkcja</Col>
-        </Row>
-        <Row>
-          <Col>Magazyn</Col>
-        </Row>
-      </Container>
+    
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <Button variant="outline-info" size="lg" className="button">
+            <i class="fa-solid fa-house icon-class"></i>Strona główna
+            </Button>{' '}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Button variant="outline-info" size="lg" className="button">
+              <i class="fa-solid fa-user-group icon-class"></i>Kadra Pracownicza
+            </Button>{' '}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Button variant="outline-info" size="lg" className="button">
+              <i class="fa-solid fa-wallet icon-class"></i>Finanse i księgowość
+            </Button>{' '}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Button variant="outline-info" size="lg" className="button">
+              <i class="fa-solid fa-chart-simple icon-class"></i>Analizy
+            </Button>{' '}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Button variant="outline-info" size="lg" className="button">
+              <i class="fa-solid fa-money-bill-transfer icon-class"></i>Sprzedaż i zakup
+            </Button>{' '}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Button variant="outline-info" size="lg" className="button">
+              <i class="fa-solid fa-industry icon-class"></i>Produkcja
+            </Button>{' '}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Button variant="outline-info" size="lg" className="button">
+            <i class="fa-solid fa-warehouse icon-class"></i>Magazyn
+          </Button>{' '}
+        </div>
+      </div>
     </div>
   )
 }

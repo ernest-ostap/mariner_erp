@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    
+}
+.row{
+    padding: 10px;
+    padding-left: 30px;
+    width: 100%;
+    height: calc(80vh/7);
+    font-weight: bold;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+    font-weight: bold;
+    height: 100%;
+}
+.button{
+    width: 85%;
+    height: 90%;
+}
+.icon-class{
+    margin-right: 15px;
+}

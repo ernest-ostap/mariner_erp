@@ -1,0 +1,26 @@
+.main-site {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+.side-menu {
+    width: 20vw;
+    height: 100vh;
+    
+}
+
+.top-bar {
+    width: 80vw;
+    height: 15vh;
+    background-color: rgb(20, 82, 82);
+}
+
+.content {
+    width: 80vw;
+    height: 85vh;
+    background-color: blue;
+}
+  
