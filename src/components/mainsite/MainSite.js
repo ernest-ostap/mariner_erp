@@ -14,7 +14,7 @@ const MainSite = () => {
       </div>
       <div className='content'>
         <h1>Strona główna </h1>
-        <p>Witaj na stronie głównej!</p>
+        
       </div>
     </div>
   )

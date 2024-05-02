@@ -15,12 +15,12 @@
 .top-bar {
     width: 80vw;
     height: 15vh;
-    background-color: rgb(20, 82, 82);
 }
 
 .content {
     width: 80vw;
     height: 85vh;
-    background-color: blue;
+    background: #ffffff;
+    background: linear-gradient(to bottom right, #ffffff 0%, #b8fffb 100%);
 }
   

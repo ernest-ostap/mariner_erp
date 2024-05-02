@@ -38,7 +38,7 @@ const SideMenu = () => {
       <div className="row">
         <div className="col">
           <Button variant="outline-info" size="lg" className="button">
-              <i class="fa-solid fa-money-bill-transfer icon-class"></i>Sprzedaż i zakup
+              <i class="fa-solid fa-money-bill-transfer icon-class"></i>Kupno i sprzedaż
             </Button>{' '}
         </div>
       </div>
