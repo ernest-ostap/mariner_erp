@@ -2,6 +2,7 @@ import React from 'react'
 import SideMenu from '../sidemenu/SideMenu'
 import './MainSite.css';
 import TopBar from '../topbar/TopBar';
+import HomePage from '../homepage/HomePage';
 
 const MainSite = () => {
   return (
@@ -13,7 +14,7 @@ const MainSite = () => {
         <TopBar />
       </div>
       <div className='content'>
-        <h1>Strona główna </h1>
+        <HomePage />
         
       </div>
     </div>
