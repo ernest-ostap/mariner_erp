@@ -2,8 +2,35 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import './HomePage.css';
+import 'chart.js/auto';
+import { Line } from 'react-chartjs-2';
+
 
 const HomePage = () => {
+
+    const data = {
+      labels: ['2019', '2020', '2021', '2022', '2023'],
+      datasets: [
+        {
+          label: 'Ilość zamówień',
+          data: [10, 25, 20, 25, 35], // Przykładowe dane
+          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          fill: true,
+        },
+      ],
+    };
+  
+    const options = {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+      responsive: true,
+      maintainAspectRatio: false,
+    };
+
   return (
     <div className="home-page">
       <Card style={{ width: '30rem', height: '18rem'}}>
@@ -46,10 +73,10 @@ const HomePage = () => {
           </Card.Text>
           <div className="buttons">
             <Button variant="outline-info" size="" className="button1">
-              Kadra Pracownicza
+              Produkcja 
             </Button>{' '}
             <Button variant="outline-info" size="" className="button1">
-              Pełny grafik
+              Projekty jednostek
             </Button>{' '}
           </div>
         </Card.Body>
@@ -57,10 +84,8 @@ const HomePage = () => {
       <Card style={{ width: '30rem', height: '18rem'}}>
         <Card.Body>
           <Card.Title>Kończące się materiały</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            
           </Card.Text>
           <div className="buttons">
             <Button variant="outline-info" size="" className="button1">
@@ -75,13 +100,16 @@ const HomePage = () => {
       <Card style={{ width: '30rem', height: '18rem'}}>
         <Card.Body>
           <Card.Title>Ilość zamówień przez ostatnie lata</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            <div style={{ height: '150px' }}>
+              <Line data={data} options={options} />
+            </div>
           </Card.Text>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
+          <div className="buttons">
+            <Button variant="outline-info" size="" className="button1">
+              Więcej analiz
+            </Button>{' '}
+          </div>
         </Card.Body>
       </Card>
     </div>
