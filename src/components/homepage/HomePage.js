@@ -84,8 +84,16 @@ const HomePage = () => {
       <Card style={{ width: '30rem', height: '18rem'}}>
         <Card.Body>
           <Card.Title>Kończące się materiały</Card.Title>
-          <Card.Text>
-            
+          <Card.Text className="card-text">
+            <div className="material-dashboard">
+              Żelkot: 5 kg
+            </div>
+            <div className="material-dashboard">
+              Żywica: 2 kg
+            </div>
+            <div className="material-dashboard">
+              Włókno szklane: 10 kg 
+            </div>
           </Card.Text>
           <div className="buttons">
             <Button variant="outline-info" size="" className="button1">

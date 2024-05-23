@@ -10,13 +10,14 @@
 .card{
     padding: 20px;
 }
+.card-text {
+    flex: 1;
+  }
 
 .buttons{
     
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-around;
+     margin-top: auto; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
