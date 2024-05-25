@@ -97,10 +97,10 @@ const HomePage = () => {
           </Card.Text>
           <div className="buttons">
             <Button variant="outline-info" size="" className="button1">
-              Kadra Pracownicza
+              Magazyn
             </Button>{' '}
             <Button variant="outline-info" size="" className="button1">
-              Pełny grafik
+              Lista dostawców
             </Button>{' '}
           </div>
         </Card.Body>

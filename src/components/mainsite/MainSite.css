@@ -1,7 +1,5 @@
 .main-site {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     height: 100vh;
     width: 100vw;
 }
@@ -9,18 +7,26 @@
 .side-menu {
     width: 20vw;
     height: 100vh;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .top-bar {
     width: 80vw;
     height: 15vh;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .content {
-    width: 80vw;
-    height: 85vh;
+    margin-top: 15vh;
+    margin-left: 20vw;
+    width: calc(80vw - 20px);
+    height: calc(85vh - 20px);
     background: #ffffff;
     background: linear-gradient(to bottom right, #ffffff 30%, #b8fffb 100%);
+    overflow-y: auto;
+    padding: 10px;
 }
-  

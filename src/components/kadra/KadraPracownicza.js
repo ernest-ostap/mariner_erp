@@ -32,7 +32,7 @@ const KadraPracownicza = () => {
   return (
     <div>
         <Tabs
-        defaultActiveKey="profile"
+        defaultActiveKey="Home"
         id="uncontrolled-tab-example"
         className="mb-3">
             <Tab eventKey="Home" title="Lista Pracowników" >
