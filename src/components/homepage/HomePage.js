@@ -5,8 +5,7 @@ import './HomePage.css';
 import 'chart.js/auto';
 import { Line } from 'react-chartjs-2';
 
-
-const HomePage = () => {
+const HomePage = ({ setContent }) => {
 
     const data = {
       labels: ['2019', '2020', '2021', '2022', '2023'],
@@ -48,10 +47,10 @@ const HomePage = () => {
             </div>
           </Card.Text>
           <div className="buttons">
-            <Button variant="outline-info" size="" className="button1">
+            <Button variant="outline-info" size="" className="button1" onClick={() => setContent('kadra')}>
               Kadra Pracownicza
             </Button>{' '}
-            <Button variant="outline-info" size="" className="button1">
+            <Button variant="outline-info" size="" className="button1" onClick={() => setContent('kadra')}>
               Pełny grafik
             </Button>{' '}
           </div>
@@ -72,10 +71,10 @@ const HomePage = () => {
             </div>
           </Card.Text>
           <div className="buttons">
-            <Button variant="outline-info" size="" className="button1">
+            <Button variant="outline-info" size="" className="button1" onClick={() => setContent('produkcja')}>
               Produkcja 
             </Button>{' '}
-            <Button variant="outline-info" size="" className="button1">
+            <Button variant="outline-info" size="" className="button1" onClick={() => setContent('produkcja')}>
               Projekty jednostek
             </Button>{' '}
           </div>
@@ -96,10 +95,10 @@ const HomePage = () => {
             </div>
           </Card.Text>
           <div className="buttons">
-            <Button variant="outline-info" size="" className="button1">
+            <Button variant="outline-info" size="" className="button1" onClick={() => setContent('magazyn')}>
               Magazyn
             </Button>{' '}
-            <Button variant="outline-info" size="" className="button1">
+            <Button variant="outline-info" size="" className="button1" onClick={() => setContent('magazyn')}>
               Lista dostawców
             </Button>{' '}
           </div>
@@ -114,7 +113,7 @@ const HomePage = () => {
             </div>
           </Card.Text>
           <div className="buttons">
-            <Button variant="outline-info" size="" className="button1">
+            <Button variant="outline-info" size="" className="button1" onClick={() => setContent('analizy')}>
               Więcej analiz
             </Button>{' '}
           </div>

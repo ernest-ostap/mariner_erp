@@ -16,7 +16,7 @@ const MainSite = () => {
   const renderContent = () => {
     switch (content) {
       case 'home':
-        return <HomePage />;
+        return <HomePage setContent={setContent}/>;
       case 'kadra':
         return <KadraPracownicza />;
       case 'finanse':
@@ -40,7 +40,7 @@ const MainSite = () => {
         <SideMenu setContent={setContent} /> 
       </div>
       <div className='top-bar'>
-        <TopBar />
+        <TopBar setContent={setContent}/>
       </div>
       <div className='content'>
         {renderContent()}

@@ -2,3 +2,8 @@
     margin-bottom: 10px;
     margin-right: 20px;
 }
+
+.buttony-kadra{
+    display: flex;
+    flex-direction: row;
+}

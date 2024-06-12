@@ -4,9 +4,15 @@ import Tabs from 'react-bootstrap/Tabs';
 import './KadraPracownicza.css';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import DodajPracownika from './dodaj/DodajPracownika';
+import EdytujPracownika from './edytuj/EdytujPracownika';
+import UsunPracownika from './usun/UsunPracownika';
 
 
 const KadraPracownicza = () => {
+    
+    //zrob tego modala w nowym komponencie wraz z buttonami !
+    
 
     const employees = [
         { id: 1, firstName: 'Jan', lastName: 'Kowalski', position: 'Manager', experience: '5 lat', contactNumber: '123-456-789', residence: 'Warszawa', pay: '9000 PLN', accountNumber: '12345678901234567890', taxOffice: 'Warszawa' },
@@ -36,9 +42,17 @@ const KadraPracownicza = () => {
         id="uncontrolled-tab-example"
         className="mb-3">
             <Tab eventKey="Home" title="Lista Pracowników" >
-                <Button variant="success" className="button-kadra">Dodaj pracownika</Button>{' '}
-                <Button variant="info" className="button-kadra">Edytuj dane pracownika</Button>{' '}
-                <Button variant="danger" className="button-kadra">Skasuj pracownika</Button>{' '}
+                <div className="buttony-kadra">
+                    <div className="button-kadra">
+                        <DodajPracownika />
+                    </div>
+                    <div className="button-kadra">
+                        <EdytujPracownika employees={employees} />
+                    </div>
+                    <div className="button-kadra">
+                        <UsunPracownika employees={employees} />
+                    </div>
+                </div>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -67,8 +81,15 @@ const KadraPracownicza = () => {
                 </Table>
             </Tab>
             <Tab eventKey="profile1" title="Płace">
-                <Button variant="info" className="button-kadra">Zmień płacę</Button>{' '}
-                <Button variant="danger" className="button-kadra">Skasuj pracownika</Button>{' '}
+                <div className="buttony-kadra">
+                    <div className="button-kadra">
+                        zmien na zmiana płacy 
+                        <EdytujPracownika employees={employees} />
+                    </div>
+                    <div className="button-kadra">
+                        <UsunPracownika employees={employees} />
+                    </div>
+                </div>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

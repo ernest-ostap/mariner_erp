@@ -1,0 +1,80 @@
+import React from 'react'
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import KadraPracownicza from '../KadraPracownicza';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
+const EdytujPracownika = ({employees}) => {
+    const [show, setShow] = useState(false);
+    const dodajClose = () => setShow(false);
+    const dodajOpen = () => setShow(true);
+
+    return (
+        <>
+            <Button variant="info" onClick={dodajOpen}>
+                Edytuj dane pracownika
+            </Button>
+        
+            <Modal show={show} 
+            onHide={dodajClose} 
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            size='xl'
+            backdrop="static"
+            >
+                <Modal.Header closeButton>
+                <Modal.Title>Edycja danych pracownika</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <DropdownButton id="dropdown-item-button" title="Wybierz pracownika">
+                        <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText>
+                        {employees.map(employee => (
+                            <div key={employee.id}>
+                                <Dropdown.Item >{employee.id}. {employee.firstName} {employee.lastName}</Dropdown.Item>  
+                            </div>
+                        ))}
+                        </DropdownButton>
+                        <Form.Group className="mb-3" controlId="fromBasicText">
+                            <Form.Label>Imię</Form.Label>
+                            <Form.Control type="text" placeholder="Wpisz Imię" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="fromBasicText">
+                            <Form.Label>Nazwisko</Form.Label>
+                            <Form.Control type="text" placeholder="Wpisz Nazwisko" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="fromBasicText">
+                            <Form.Label>Stanowisko</Form.Label>
+                            <Form.Control type="text" placeholder="Wpisz Stanowisko" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="fromBasicNumber">
+                            <Form.Label>Staż pracy</Form.Label>
+                            <Form.Control type="number" placeholder="Wpisz Staż pracy" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="fromBasicText">
+                            <Form.Label>Numer konta</Form.Label>
+                            <Form.Control type="text" placeholder="Wpisz Numer konta" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="fromBasicText">
+                            <Form.Label>Urząd skarbowy</Form.Label>
+                            <Form.Control type="text" placeholder="Wpisz Urząd skarbowy" />
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="danger" onClick={dodajClose}>
+                    Anuluj
+                </Button>
+                <Button variant="primary" onClick={dodajClose}>
+                    Zmień dane
+                </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    );
+}
+
+export default EdytujPracownika
