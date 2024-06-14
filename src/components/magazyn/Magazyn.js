@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, Card, Table, button } from 'react-bootstrap';
 import './Magazyn.css';
+import Inwentaryzacja from './inwentaryzacja/Inwentaryzacja';
+import OstatniaDostawa from './dostawa/OstatniaDostawa';
 
 const Magazyn = () => {
   const materials = [
@@ -23,8 +25,12 @@ const Magazyn = () => {
   return (
     <div className="magazyn">
       <div className="magazyn-buttons">
-        <Button variant="info" className='m-3'>Inwentaryzacja</Button>
-        <Button variant="success" className="m-3">Zatwiedź ostatnią dostawę</Button>
+        <div className="magazyn-button">
+          <Inwentaryzacja materials={materials} />
+        </div>
+        <div className="magazyn-button">
+          <OstatniaDostawa />
+        </div>
       </div>
       <Card className="mb-4">
         <Card.Body>

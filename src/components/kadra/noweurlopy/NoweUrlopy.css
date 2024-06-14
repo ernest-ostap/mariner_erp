@@ -1,0 +1,10 @@
+.urlopy-akcje{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.urlopy-akcje-button{
+    margin-right: 10px;
+}

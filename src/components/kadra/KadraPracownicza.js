@@ -7,6 +7,9 @@ import Button from 'react-bootstrap/Button';
 import DodajPracownika from './dodaj/DodajPracownika';
 import EdytujPracownika from './edytuj/EdytujPracownika';
 import UsunPracownika from './usun/UsunPracownika';
+import ZmianaPlacy from './zmaniaplacy/ZmianaPlacy';
+import NoweUrlopy from './noweurlopy/NoweUrlopy';
+import UsunUrlop from './usunurlop/UsunUrlop';
 
 
 const KadraPracownicza = () => {
@@ -83,8 +86,7 @@ const KadraPracownicza = () => {
             <Tab eventKey="profile1" title="Płace">
                 <div className="buttony-kadra">
                     <div className="button-kadra">
-                        zmien na zmiana płacy 
-                        <EdytujPracownika employees={employees} />
+                        <ZmianaPlacy employees={employees} />
                     </div>
                     <div className="button-kadra">
                         <UsunPracownika employees={employees} />
@@ -118,8 +120,14 @@ const KadraPracownicza = () => {
                 </Table>
             </Tab>
             <Tab eventKey="profile2" title="Urlopy">
-                <Button variant="info" className="button-kadra">Wyświetl zapytania o urlopy</Button>{' '}
-                <Button variant="danger" className="button-kadra">Skasuj urlop</Button>{' '}
+                <div className="buttony-kadra">
+                    <div className="button-kadra">
+                        <NoweUrlopy urlopy={urlopy}/>
+                    </div>
+                    <div className="button-kadra">
+                        <UsunUrlop urlopy={urlopy}/>
+                    </div>
+                </div>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Card, Button } from 'react-bootstrap';
+import DodajTransakcje from './dodaj/DodajTransakcje';
 
 const FinanseKsiegowosc = () => {
   const transactions = [
@@ -49,7 +50,7 @@ const FinanseKsiegowosc = () => {
               ))}
             </tbody>
           </Table>
-          <Button variant="primary">Dodaj Transakcję</Button>
+          <DodajTransakcje />
         </Card.Body>
       </Card>
     </div>

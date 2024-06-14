@@ -2,19 +2,19 @@ import React from 'react'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import KadraPracownicza from '../KadraPracownicza';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-const UsunPracownika = ({employees}) => {
-
+const UsunUrlop = ({urlopy}) => {
     const [show, setShow] = useState(false);
     const dodajClose = () => setShow(false);
     const dodajOpen = () => setShow(true);
-    
-    return (
-        <>
+  return (
+    <>
             <Button variant="danger" onClick={dodajOpen}>
-                Skasuj pracownika
+                Skasuj urlop
             </Button>
         
             <Modal show={show} 
@@ -25,14 +25,16 @@ const UsunPracownika = ({employees}) => {
             backdrop="static"
             >
                 <Modal.Header closeButton>
-                <Modal.Title>Edycja danych pracownika</Modal.Title>
+                <Modal.Title>Usuń istniejący urlop</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <DropdownButton id="dropdown-item-button" title="Wybierz pracownika">
-                        <Dropdown.ItemText>Pracownicy</Dropdown.ItemText>
-                        {employees.map(employee => (
-                            <div key={employee.id}>
-                                <Dropdown.Item >{employee.id}. {employee.firstName} {employee.lastName}</Dropdown.Item>  
+                        <Dropdown.ItemText>Wybierz urlop</Dropdown.ItemText>
+                        {urlopy.map(urlopy => (
+                            <div key={urlopy.id}>
+                                <Dropdown.Item>
+                                    {urlopy.id}. {urlopy.employeeId} {urlopy.firstName} {urlopy.lastName}: od {urlopy.startDate} do {urlopy.endDate}
+                                </Dropdown.Item>  
                             </div>
                         ))}
                     </DropdownButton>
@@ -42,12 +44,12 @@ const UsunPracownika = ({employees}) => {
                     Anuluj
                 </Button>
                 <Button variant="warning" onClick={dodajClose}>
-                    Usuń pracownika
+                    Usuń urlop
                 </Button>
                 </Modal.Footer>
             </Modal>
         </>
-    );
+  )
 }
 
-export default UsunPracownika
+export default UsunUrlop
